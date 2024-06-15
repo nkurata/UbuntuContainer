@@ -19,7 +19,7 @@ This document provides instructions for setting up a Docker environment that mim
 To simplify the process of running your Docker container, you can define an alias in your `.zshrc` file. Add the following line to your `.zshrc` file, replacing `<name_of_container>` with the name you used when tagging your Docker image.
 
 ```sh
-alias tekidocker='sudo docker run --rm -it -v $PWD:/home/myapp:Z -w /home/myapp <name_of_container>'
+alias name_of_alias='sudo docker run --rm -it -v $PWD:/home/myapp:Z -w /home/myapp <name_of_container>'
 ```
 
 After adding the alias, reload your `.zshrc` file or restart your terminal session to apply the changes. You can now use the `tekidocker` command to launch your Docker container with the specified environment.
