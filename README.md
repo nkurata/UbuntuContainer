@@ -19,22 +19,22 @@ This document provides instructions for setting up a Docker environment that mim
 To simplify the process of running your Docker container, you can define an alias in your `.zshrc` file. Add the following line to your `.zshrc` file, replacing `<name_of_container>` with the name you used when tagging your Docker image.
 
 ```sh
-alias name_of_alias='sudo docker run --rm -it -v $PWD:/home/myapp:Z -w /home/myapp <name_of_container>'
+alias ubuntu='sudo docker run --rm -it -v $PWD:/home/:Z -w /home <name_of_container>'
 ```
 
-After adding the alias, reload your `.zshrc` file or restart your terminal session to apply the changes. You can now use the `tekidocker` command to launch your Docker container with the specified environment.
+After adding the alias, reload your `.zshrc` file or restart your terminal session to apply the changes. You can now use the `ubuntu` command to launch your Docker container with the specified environment.
 
 ## Running Docker Without the Alias
 If you prefer to run the Docker container without setting up an alias, you can use the following command. Replace `<name_of_container>` with the name of your Docker image:
 
 ```sh
-sudo docker run --rm -it -v $PWD:/home/myapp:Z -w /home/myapp <name_of_container>
+sudo docker run --rm -it -v $PWD:/home/:Z -w /home <name_of_container>
 ```
 
 ## Additional Notes
 - The Dockerfile installs essential tools for development, including GCC, G++, Valgrind, Zsh, Curl, Git, and Netcat OpenBSD.
 - It configures Zsh with Oh My Zsh and a minimal OS theme for a pleasant coding experience.
-- The working directory inside the container is set to `/home/myapp`, where your project files are mounted from your host machine.
+- The working directory inside the container is set to `/home`, where your project files are mounted from your host machine.
 - You are free to not use the version provided here and instead use it as inspiration to create your own custom setup.
 
 ## License
