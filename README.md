@@ -37,4 +37,10 @@ sudo docker run --rm -it -v $PWD:/home/myapp:Z -w /home/myapp <name_of_container
 - The working directory inside the container is set to `/home/myapp`, where your project files are mounted from your host machine.
 - You are free to not use the version provided here and instead use it as inspiration to create your own custom setup.
 
+## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Contributing
+Contributions are welcome! Please fork the repository and submit a pull request for any enhancements or fixes.
+
 By following these steps, you can efficiently develop on your Apple Silicon Mac as if you were using an x86-64 Ubuntu system, benefiting from the isolation and consistency provided by Docker.
